@@ -1,0 +1,15 @@
+{
+  "SEARCH": {
+    "PLACEHOLDER": "Enter an app name..."
+  },
+  "ORDER": {
+    "OPTIONS": { "LOWER": "Lower to bigger", "BIGGER": "Bigger to lower" }
+  },
+  "SELECT": {
+    "OPTIONS": { "PRICE": "Price", "DATE": "Publish Date" }
+  },
+  "NAV": {
+    "SEARCH": "Search",
+    "LIKE": "Like list"
+  }
+}

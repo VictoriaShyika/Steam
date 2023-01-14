@@ -1,25 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useTypedSelector } from './hooks/useTypedSelector';
+import { Route, Routes } from 'react-router-dom';
+import { Search } from './page/search';
+import { Like } from './page/like';
 
 function App() {
+  const { items, loading } = useTypedSelector((state) => state.items);
+  const { likes } = useTypedSelector((state) => state.likes);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<Search items={items} loading={loading} />} />
+      <Route path="/like" element={<Like likes={likes} items={items} />} />
+    </Routes>
   );
 }
 
