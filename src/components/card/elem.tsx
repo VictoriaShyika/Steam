@@ -66,7 +66,7 @@ export const Elem: React.FC<{
 const Card = styled.div`
   cursor: pointer;
   position: relative;
-  min-height: 199px;
+  min-height: 220px;
   box-sizing: border-box;
   min-width: 253px;
   border-radius: ${SIZE_BORDER_RADIUS_DATA[SIZE_BORDER_RADIUS_ENUM.DEFAULT]}px;
